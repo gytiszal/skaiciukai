@@ -1,5 +1,7 @@
 function generateButtons() {
-const numbers = document.querySelector(".numbers");
-numbers.innerHTML ="<button></button>";
+    const numbers = document.querySelector(".numbers");
+    for (let i = 0; i < 10; i++) {
+        numbers.innerHTML += "<button></button>";
+    }
 }
 generateButtons();
