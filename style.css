@@ -31,3 +31,16 @@ body {
     text-align: center;
     margin: 100px auto;
 }
+
+.count {
+    font-size: 34px;
+    text-align: center;
+    margin: 100px auto;
+    color:#2c3e50 ;
+    font-size: 90px;
+    width: 90px;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    height: 100px;
+    text-transform: uppercase;
+}

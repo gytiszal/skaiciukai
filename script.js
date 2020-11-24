@@ -1,5 +1,6 @@
 const numbers = document.querySelector(".numbers");
 const messageElement = document.querySelector(".message");
+const timer = document.getElementById("count");
 
 function generateButtons() {
     numbers.innerHTML = "";
@@ -19,6 +20,7 @@ function onButtonClick(button) {
             console.log("Radome didesnį skaičių");
             setMessage("Jūs pralaimėjote! Žaiskite iš naujo!");
             generateButtons();
+            newInterval();
             return;
         }
     }
@@ -28,6 +30,7 @@ function onButtonClick(button) {
     if (!numbers.children.length) {
         setMessage("Jūs laimėjote! Žaiskite iš naujo!");
         generateButtons();
+        newInterval();
     }
 }
 
@@ -38,3 +41,21 @@ function setMessage(message) {
         messageElement.innerHTML = "";
     }, 3000);
 }
+
+
+
+
+
+    let count = 4;
+    let interval = setInterval(function () {
+        timer.innerHTML = count;
+        count--;
+        if (count === 0) {
+            clearInterval(interval);
+            timer.innerHTML = '';
+            // alert("You're out of time!");
+            setMessage("Jūs pralaimėjote! Žaiskite iš naujo!");
+            generateButtons();
+        }
+    }, 1000);
+    
