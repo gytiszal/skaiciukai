@@ -1,7 +1,9 @@
 function generateButtons() {
     const numbers = document.querySelector(".numbers");
     for (let i = 0; i < 10; i++) {
-        numbers.innerHTML += "<button></button>";
+        let randomNumber = Math.floor((Math.random() * 100) + 1);
+        numbers.innerHTML += `<button>${randomNumber}</button>`;
     }
 }
 generateButtons();
+
