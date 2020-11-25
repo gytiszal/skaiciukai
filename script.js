@@ -53,9 +53,11 @@ function setMessage(message) {
         if (count === 0) {
             clearInterval(interval);
             timer.innerHTML = '';
-            // alert("You're out of time!");
             setMessage("Jūs pralaimėjote! Žaiskite iš naujo!");
             generateButtons();
+            return;
         }
+       
     }, 1000);
     
+
